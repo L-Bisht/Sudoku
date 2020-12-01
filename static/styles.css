@@ -1,0 +1,116 @@
+main{
+    /* center form controls */
+    display: inline-block;
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+    /* constrain images on small screens */
+    max-width: 100%;
+    /* Align text to the center */
+    text-align: center;
+}
+
+.cells{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    margin-right: -5px;
+    border: none;
+    text-align: center;
+}
+
+.cells:focus{
+    outline: none;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center{
+    left: 50%;
+}
+
+.gametable tr, tr td{
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+td:hover{
+    background-color: #B0CEDE;
+}
+
+.cells{
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    display: inline-block;
+    text-shadow: 0 0 0 gray;
+    cursor: default;
+}
+
+.gametable{
+    border: 2px solid black;
+}
+
+.center-button{
+    margin-left: -105px;
+}
+/*
+.center-table{
+    margin-left: -280px;
+}
+*/
+.center-logo{
+    margin-left: -100px;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#playbutton{
+    padding: 15px 80px;
+    background-color: #0A7E8C;
+    font-size: 25px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 4px #2243B6;
+    color: white;
+    cursor: pointer;
+}
+
+#playbutton:hover{
+    box-shadow: 0 0 8px #2243B6;
+}
+
+.logo{
+    font-family: "Comics Sans MS", cursive, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Denim blue */
+.blue{
+    color: #2243B6;
+}
+
+/* Lemon */
+.yellow{
+    color: #FFFF38;
+}
+
+/* Screamin' green */
+.green{
+    color: #66FF66;
+}
+
+/* Scarlet */
+.red{
+    color: #FD0E35;
+}

@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+
+{% block main %}
+    <form action="/result" method="POST">
+        <div class="form-group">
+            <table class="gametable vertical-center">
+                {% for row in range(0, 9) %}
+                    <tr>
+                        {% for col in range(0, 9) %}
+                            <td
+                            style="
+                                {% if row % 3 == 0 %}
+                                    border-top: 2px solid black;
+                                {% endif %}
+                                {% if col % 3 == 0 %}
+                                    border-left: 2px solid black;
+                                {% endif %}"
+                                >
+                                {% set name = row ~ '_' ~ col %}
+                                <input name="{{name}}" class="cells" type="number"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); this.focus();"
+                                    {% if puzzle[row][col] != 0 %}
+                                        readonly
+                                    {% endif %} 
+                                    min="0" max="9" maxlength="1" value="{{puzzle[row][col]}}">
+                            </td>
+                        {% endfor %}    
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div style="top:80%">
+            <input type="submit" value="Submit" class="logo vertical-center">
+        </div>
+        
+    </form>
+{% endblock main %}
+    
